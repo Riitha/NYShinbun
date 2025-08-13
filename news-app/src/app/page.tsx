@@ -1,19 +1,19 @@
 import CardContainer from "@/components/card-container";
 
-const fetchNews = async () => {
-  const res = await fetch('http://localhost:3001/news');
-  const news: News[] = await res.json();
+ async function getNews() {
+  const res = await fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=XxRy9SySs4sAs1aTIe8yULS6HKvYbQGA', { cache: "force-cache"});
+  const data: { results: News[] } = await res.json() 
 
-  return news;
-};
+  return data.results;
+}
 
 export default async function Home() {
-  const news = await fetchNews();
+  const news = await getNews();
 
   return (
     <>
       <h1>Home Page</h1>
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <CardContainer news={news}/>
       </div>
 

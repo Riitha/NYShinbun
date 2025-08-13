@@ -1,11 +1,11 @@
-import Card from "./card"
+import Card from "./news-card"
 
 export default function CardContainer({news} : {news: News[]}) {
     return (
         <>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {news.map((item) => (
-                <Card key={item.id} item={item}/>
+                <Card key={item.uri} item={item}/>
             ))}
         </div>
         </>

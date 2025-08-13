@@ -1,10 +1,13 @@
+interface NytMedia {
+  url: string;
+}
+
 interface News {
-  id: string;
-  title: string;
-  description: string;
-  poster: string;
-  publishedAt: string;
-  originalUrl: string;
-  author: string;
-  category: string;
+uri: string;
+section: string;
+byline: string;
+published_date: string;
+title: string;
+multimedia: NytMedia[];
+abstract: string;
 }
