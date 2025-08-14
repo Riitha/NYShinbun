@@ -11,6 +11,7 @@ title: string;
 multimedia: NytMedia[];
 abstract: string;
 }
+
 interface Headline {
   main: string;
 }
