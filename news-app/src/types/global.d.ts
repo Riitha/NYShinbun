@@ -11,3 +11,13 @@ title: string;
 multimedia: NytMedia[];
 abstract: string;
 }
+interface Headline {
+  main: string;
+}
+interface Thumbnail {
+  default: {url: string};
+}
+interface NewsSearch {
+  headline: Headline;
+  multimedia: Thumbnail;
+}

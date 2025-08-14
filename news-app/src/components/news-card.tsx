@@ -8,7 +8,7 @@ export default function Card({ item }: { item: News }) {
                     <img
                         src={item.multimedia[0].url}
                         alt={item.title}
-                        className="w-full aspect-[16/9]" />
+                        className="w-full aspect-[16/9] object-cover" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{item.title}</h2>

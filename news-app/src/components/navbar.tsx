@@ -8,7 +8,7 @@ export default function Navbar() {
                     <Link href='/' className="btn btn-ghost text-xl">NHK</Link>
                 </div>
                 <div className="flex gap-2">
-                    <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+                    <Link href='/search'>search</Link>
                 </div>
             </div>
         </>
