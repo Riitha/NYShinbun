@@ -1,7 +1,9 @@
 import CardContainer from "@/components/card-container";
+import DropdownCategory from "@/components/dropdown-section";
 
 
-export default async function CategoryPage({params, } : {params: {tag:string}}) {
+export default async function CategoryPage(props: {params: Promise<{tag:string}>}) {
+    const params = await props.params;
     const { tag } = params;
     const res = await fetch(`https://api.nytimes.com/svc/topstories/v2/${tag}.json?api-key=XxRy9SySs4sAs1aTIe8yULS6HKvYbQGA`);
     const data = await res.json()
@@ -10,6 +12,7 @@ export default async function CategoryPage({params, } : {params: {tag:string}}) 
     <>
     <main className="w-full h-full">
         <div>
+            <DropdownCategory/>
             <CardContainer news={news}/>
         </div>
     </main>

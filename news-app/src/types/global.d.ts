@@ -20,5 +20,7 @@ interface Thumbnail {
 }
 interface NewsSearch {
   headline: Headline;
+  byline: {original: string};
   multimedia: Thumbnail;
+  document_type: string;
 }

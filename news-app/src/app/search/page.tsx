@@ -1,6 +1,7 @@
 'use client'
 
-import Image from "next/image";
+import ListSearch from "@/components/list-search";
+// import Image from "next/image";
 import { useState } from "react"
 
 export default function SearchPage() {
@@ -27,14 +28,8 @@ export default function SearchPage() {
                 <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" value={search} onChange={handleOnChange} />
                 <button className="btn" onClick={handleSearch}>cari</button>
             </div>
-            {result?.map((item, index)=> {
-                return (
-                    <div key={index}>
-                        <Image src={item.multimedia.default.url} width={100} height={100} className="w-30 h-30" alt="ab"/>
-                        {item.headline.main}
-                    </div>
-                )
-            })}
+
+            <ListSearch result={result}/>
         </>
     )
 }
