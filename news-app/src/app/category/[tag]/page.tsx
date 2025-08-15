@@ -1,5 +1,4 @@
 import CardContainer from "@/components/card-container";
-import DropdownCategory from "@/components/dropdown-section";
 
 
 export default async function CategoryPage(props: {params: Promise<{tag:string}>}) {
@@ -12,7 +11,6 @@ export default async function CategoryPage(props: {params: Promise<{tag:string}>
     <>
     <main className="w-full h-full">
         <div>
-            <DropdownCategory/>
             <CardContainer news={news}/>
         </div>
     </main>

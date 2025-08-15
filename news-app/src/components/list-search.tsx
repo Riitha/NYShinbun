@@ -7,14 +7,17 @@ export default function ListSearch({ result }: { result: NewsSearch[] }) {
 
                 {result.map((item, index) => (
                     <li key={index} className="list-row">
-                        <div className="text-4xl font-thin opacity-30 tabular-nums">{index+1}</div>
+                        <div className="text-4xl font-thin opacity-30 tabular-nums">{index + 1}</div>
                         <div>
-                            <Image 
-                            className="size-10 rounded-box" 
-                            src={item.multimedia.default.url}
-                            width={100} height={100}
-                            alt={item.headline.main}
-                             />
+                            {item.multimedia?.default.url ? (
+                                <Image
+                                    className="size-10 rounded-box"
+                                    src={item.multimedia.default.url}
+                                    width={100} height={100}
+                                    alt={item.headline.main}
+                                />
+                            ) : null}
+
                         </div>
                         <div className="list-col-grow">
                             <div>{item.headline.main}</div>

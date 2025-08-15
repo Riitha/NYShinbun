@@ -2,7 +2,7 @@ export default function Card({ item }: { item: News }) {
 
     return (
         <>
-            <div className="card bg-base-100 w-96 shadow-sm">
+            <div className="card bg-base-100 w-96 shadow-s h-100 max-h-100 my-2">
                 <figure>
                     <img
                         src={item.multimedia[0].url}
@@ -11,9 +11,9 @@ export default function Card({ item }: { item: News }) {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{item.title}</h2>
-                    <span className="badge badge-neutral badge-outline text-white">{new Date(item.published_date).toLocaleDateString('id-ID', {year:'numeric', month:'long', day:'numeric'})}</span>
-                    <div className="card-actions justify-end">
-                        <span className="badge badge-secondary">{item.section}</span>
+                    <div className="flex justify-between items-center mt-auto">
+                        <span className="badge badge-neutral badge-outline text-white">{new Date(item.published_date).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        <span className="badge badge-secondary ">{item.section}</span>
                     </div>
                 </div>
             </div>
