@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NY Shinbun",
-  description: "berita",
+  description: "紐育に関するニュースをご提案するサイト"
 };
 
 export default function RootLayout({
