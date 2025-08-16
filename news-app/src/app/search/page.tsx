@@ -3,7 +3,7 @@
 import ListSearch from "@/components/list-search";
 // import Image from "next/image";
 import { useState } from "react"
-
+import Swal from 'sweetalert2'
 export default function SearchPage() {
     const [search, setSearch] = useState<string>('');
     const [result, setResult] = useState<NewsSearch[]>([])
@@ -16,8 +16,12 @@ export default function SearchPage() {
 
             const result = await res.json();
             setResult(result.response.docs)
-        } catch (error) {
-            console.log(error)
+        } catch {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Article not found!",
+            });
         }
     }
     console.log(result)
