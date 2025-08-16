@@ -2,7 +2,7 @@ export default function Card({ item }: { item: News }) {
 
     return (
         <>
-            <div className="card bg-base-100 w-96 shadow-s h-100 max-h-100 my-2">
+            <div className="card bg-malibu/90 w-96 shadow-s h-100 max-h-100 my-2">
                 <figure>
                     <img
                         src={item.multimedia[0].url}

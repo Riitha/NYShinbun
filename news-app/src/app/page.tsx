@@ -21,11 +21,13 @@ export default async function Home() {
 
   return (
     <>
-      <h1>Home Page</h1>
-      <div className="w-full h-full">
+      <main className="w-full h-full bg-zumthor">
+        <h1 className="mt-16 text-black text-center font-['Quintessential'] text-md sm:text-xl md:text-3xl lg:text-4xl font-bold p-2">Breaking News</h1>
         <CarouselNews updatedNews={updatedNews}/>
+        <br />
+        <h1 className="font-['Tinos'] font-bold text-firefly text-md md:text-4xl lg:text-5xl p-2 ml-10 border-b-2 border-skeptic w-32 lg:w-40">News Today!</h1>
         <CardContainer news={news} />
-      </div>
+      </main>
 
     </>
   );

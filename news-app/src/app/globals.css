@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -5,12 +8,23 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@theme {
+  --color-malibu: oklch(0.7509 0.1355 247.05);
+  --color-catskill: oklch(0.9842 0.0034 247.86);
+  --color-firefly:oklch(0.2226 0.032 228.72);
+  --color-pigeon:oklch(0.838 0.0284 248.17);
+  --color-skeptic:oklch(0.9104 0.0287 188.55);
+  --color-zumthor:oklch(0.9717 0.0144 244.71);
 
+  --font-quintessential: "Quintessential", sans-serif;
+  --font-tinos: "Tinos", sans-serif;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
 @media (prefers-color-scheme: dark) {
